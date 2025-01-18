@@ -41,7 +41,6 @@
     function Start()
     {
         console.log("Starting...");
-        // getting the string value inside the title tag, which is used as the case condition
         switch(document.title){
             case "Home":
                 DisplayHomePage();
