@@ -7,33 +7,18 @@
         let aboutUsBtn = document.getElementById('AboutUsBtn');
         aboutUsBtn.addEventListener("click",function (){
             location.href="about.html";
-        });
+        })
+
         let mainContent = document.getElementsByTagName('main')[0];
 
-        // creating a dynamic paragraph element in the dom and setting attributes for the paragraph tags
-        let mainParagraph = document.createElement("p");
-        mainParagraph.setAttribute("id", "mainParagraph");
-        mainParagraph.setAttribute("class", "mt-3");
+        let mainParagraph = document.createElement('p');
+        mainParagraph.setAttribute('id','mainParagraph');
+        mainParagraph.setAttribute('class','mt-3');
 
-        mainParagraph.textContent = "This is the main paragraph";
-        // this line connects the new 'mainparagraph' to the mainContent which is main tag inside the index.html file
+        let FirstString = "This is";
+        let SecondString =` ${FirstString} the Main Paragraph`;
+        mainParagraph.textContent = SecondString;
         mainContent.appendChild(mainParagraph);
-
-        let firstString = "This is";
-        let secondString = `${firstString} the Main Paragraph from second string`;
-        mainParagraph.textContent = secondString;
-        
-
-        let DocumentBody = document.body;
-        let Article = document.createElement("article");
-        let ArticleParagraph = <p id="ArticleParagraph" class="mt-3"> This is my article paragraph</p>
-
-        ArticleParagraph.setAttribute("class", "container");
-        Article.innerHtml = ArticleParagraph;
-        // appending the new created article tag to the body tag inside the document
-        DocumentBody.appendChild(Article);
-
-
 
     }
 
